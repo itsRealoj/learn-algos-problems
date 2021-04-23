@@ -4,10 +4,8 @@
 const strCount = (str) => {
     let tempObj = {}
 
-    // remove spaces --> split into array then join to remove spaces
-    let newStr = str.split(' ').join('')
-    for(let i in newStr) {
-        let char = newStr[i].toLowerCase()
+    for(let i in str) {
+        let char = str[i].toLowerCase()
         // test if character is alphanumeric
         if(/[a-z0-9]/.test(char)) {
             !tempObj[char] ? tempObj[char] = 1 : tempObj[char] ++;
