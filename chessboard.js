@@ -1,6 +1,3 @@
-
-
-
 /*
 CHESSBOARD
 ==============
@@ -20,11 +17,26 @@ Pseudocode
 let str = '';
 do {
   
-  if(str.length % 2 === 0) str += '#';
-  	str += ' ';
+  if(str.length % 2 === 0) {str += '#';
+}
+  else {	
+      str += ' ';
+    }
     
-  if(str.length % 8 === 0) str += '\n'; 
+  if(str.length % 8 === 0 && str.length <  9) {
+      str += '\n';
+} 
+  else if(str.length % 8 === 0 && str.length > 9) {
+      if(str.length % 2 === 0){
+           str += '#';
+           str += '\n'
+        } else {
+
+            str += ' ';
+            str += '\n'
+        }
+  }
   
-} while(str.length <= 64);
+} while(str.length <= (8 * 8));
 
 console.log(str);
