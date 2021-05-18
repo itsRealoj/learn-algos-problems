@@ -31,7 +31,6 @@ do {
            str += '#';
            str += '\n'
         } else {
-
             str += ' ';
             str += '\n'
         }
