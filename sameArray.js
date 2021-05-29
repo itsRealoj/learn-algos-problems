@@ -27,7 +27,6 @@ Steps
 */ 
 
 function same(arr1, arr2) {
-
     let obj = {}
     for (let val of arr1) {
         if (obj[val] == undefined) obj[val] = 1
@@ -44,9 +43,8 @@ function same(arr1, arr2) {
         if(obj[arrVal]) {
                 obj[arrVal] = obj[arrVal] -=1;
             } 
-        
+        }
         console.log(obj)
-    }
     
 }
-same([1,3,2], [1,4,9]) 
+same([1,3,2,], [1,4,9]) 
