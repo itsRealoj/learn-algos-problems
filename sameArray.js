@@ -34,5 +34,19 @@ function same(arr1, arr2) {
         else if(obj[val] > 0) obj[val] = obj[val] +1;
     }
     console.log(obj)
+
+    for(let val of arr2) {
+        let arrVal = Math.sqrt(val);
+        console.log(arrVal)
+        if(!(obj[arrVal])) {
+            return false
+        } else 
+        if(obj[arrVal]) {
+                obj[arrVal] = obj[arrVal] -=1;
+            } 
+        
+        console.log(obj)
+    }
+    
 }
-same([1,2,3, 3, 5], [1,4,9]) 
+same([1,3,2], [1,4,9]) 
