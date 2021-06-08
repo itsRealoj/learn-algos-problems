@@ -14,28 +14,32 @@ Pseudocode
 - if lenght equals 8, go  to new line
 */
 
-let str = '';
-do {
-  
-  if(str.length % 2 === 0) {str += '#';
-}
-  else {	
-      str += ' ';
-    }
-    
-  if(str.length % 8 === 0 && str.length <  9) {
-      str += '\n';
-} 
-  else if(str.length % 8 === 0 && str.length > 9) {
-      if(str.length % 2 === 0){
-           str += '#';
-           str += '\n'
-        } else {
-            str += ' ';
-            str += '\n'
-        }
-  }
-  
-} while(str.length <= (8 * 8));
+/*
+Pseudocode
+============
+- create empty object
+- create empty string variable
+- concat the string with alternating space (' ') and #.
+- 
 
-console.log(str);
+*/
+
+function chessboardOne () {
+  let str = '';
+  let newStr = '';
+
+  while(str.length <= (8 * 8)) {
+
+if(newStr.length === 8) {
+  newStr += '/n';
+  str += newStr;
+} else {
+  if(newStr[newStr.lenght - 1] === '#') newStr += ' ';
+  newStr += '#';
+}
+console.log(str)
+
+}
+}
+
+chessboardOne()

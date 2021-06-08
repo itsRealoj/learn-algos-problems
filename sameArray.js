@@ -48,3 +48,6 @@ function same(arr1, arr2) {
     
 }
 same([1,3,2,], [1,4,9]) 
+
+
+console.log(Math.floor(Math.random()))
