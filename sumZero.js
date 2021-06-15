@@ -16,6 +16,7 @@ STEPS
 - if value is 0, return the set 
 - else increment the first index and decremetn the last index and find the sum.
 - if no zero sum return null.
+- review my code
 */ 
 
 function sumZero(arr) {
@@ -25,13 +26,14 @@ function sumZero(arr) {
     let firstIndex = 0;
     let lastIndex = arr.length - 1
 
-    let sum = arr[firstIndex] + arr[lastIndex];
+    let sum;
     
-    while(sum !== 0) {
+    while(lastIndex > firstIndex) {
         lastIndex -= 1;
         firstIndex += 1;
-        console.log(sum)
+        sum = arr[firstIndex] + arr[lastIndex];
     }
+    console.log(sum)
     
     console.log([arr[firstIndex], arr[lastIndex]])
     return [arr[firstIndex], arr[lastIndex]];
